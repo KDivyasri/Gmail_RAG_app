@@ -42,17 +42,17 @@ This application follows a **Retrieval-Augmented Generation (RAG)** workflow:
 ## 🏗️ Architecture
 
 User Question
-↓
+->
 Streamlit Interface
-↓
+->
 Embedchain Pipeline
-↓
+->
 Vector Database (Chroma)
-↓
+->
 Relevant Email Context
-↓
+->
 OpenAI LLM
-↓
+->
 Generated Answer
 
 ---
@@ -73,8 +73,8 @@ Generated Answer
 
 Clone the repository:
 
-git clone https://github.com/YOUR_USERNAME/Gmail_RAG_app.git
-cd Gmail_RAG_app
+- git clone https://github.com/YOUR_USERNAME/Gmail_RAG_app.git
+- cd Gmail_RAG_app
 
 Install dependencies:
 
@@ -115,10 +115,10 @@ A browser window will open where you can:
 
 Gmail_RAG_app/
 │
-├── app.py
-├── requirements.txt
-├── README.md
-└── .gitignore
+├──app.py
+├──requirements.txt
+├──README.md
+└──.gitignore
 
 ---
 
@@ -128,8 +128,8 @@ Sensitive files should not be pushed to GitHub.
 
 Add these to `.gitignore`:
 
-credentials.json
-token.json
+- credentials.json
+- token.json
 
 ---
 
