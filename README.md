@@ -1,148 +1,144 @@
-
 # 📧 Chat with Your Gmail Inbox using RAG
 
-An AI-powered Gmail assistant that allows you to **ask questions about your inbox using natural language**.
-This project uses **Retrieval-Augmented Generation (RAG)** to retrieve relevant email content and generate answers using an LLM.
+An AI-powered Gmail assistant that lets you **ask questions about your inbox using natural language**. Built with Retrieval-Augmented Generation (RAG) to retrieve relevant email content and generate answers using an LLM.
 
 Built with **Python, Streamlit, OpenAI, Embedchain, ChromaDB, and the Gmail API**.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 📬 Chat with your Gmail inbox
-- 🔎 Semantic retrieval of email content
-- 🤖 AI-generated answers using OpenAI models
-- ⚡ Vector search using ChromaDB
+- 📬 Chat with your Gmail inbox in natural language
+- 🔎 Semantic retrieval of relevant email content
+- 🤖 AI-generated answers powered by OpenAI models
+- ⚡ Fast vector search using ChromaDB
 - 🖥️ Interactive UI built with Streamlit
-- 🔐 Secure Gmail authentication using OAuth
+- 🔐 Secure Gmail authentication via OAuth 2.0
 
-Example queries:
-
-- Summarize my recent emails
-- Any emails about payments?
-- Who emailed me today?
-- Do I have emails about interviews?
+**Example queries:**
+- *"Summarize my recent emails"*
+- *"Any emails about payments?"*
+- *"Who emailed me today?"*
+- *"Do I have any emails about interviews?"*
 
 ---
 
 ## 🧠 How It Works
 
-This application follows a **Retrieval-Augmented Generation (RAG)** workflow:
+This app follows a standard **RAG (Retrieval-Augmented Generation)** workflow:
 
-1. Gmail emails are fetched using the Gmail API
-2. Emails are converted into **embeddings** using OpenAI
-3. Embeddings are stored in a **Chroma vector database**
+1. Gmail emails are fetched using the **Gmail API**
+2. Emails are converted into **vector embeddings** using OpenAI
+3. Embeddings are stored in a **ChromaDB vector database**
 4. When a user asks a question:
    - Relevant email chunks are retrieved from the vector database
-   - The LLM generates an answer using the retrieved context
+   - The **OpenAI LLM** generates an answer using the retrieved context as a prompt
 
 ---
 
 ## 🏗️ Architecture
 
+```
 User Question
-->
-Streamlit Interface
-->
-Embedchain Pipeline
-->
-Vector Database (Chroma)
-->
-Relevant Email Context
-->
-OpenAI LLM
-->
-Generated Answer
+    → Streamlit Interface
+    → Embedchain Pipeline
+    → ChromaDB Vector Database
+    → Relevant Email Context
+    → OpenAI LLM
+    → Generated Answer
+```
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python
-- Streamlit
-- OpenAI API
-- Embedchain
-- ChromaDB
-- Gmail API
-- OAuth2 Authentication
+| Layer | Technology |
+|---|---|
+| Frontend | Streamlit |
+| LLM & Embeddings | OpenAI API |
+| RAG Pipeline | Embedchain |
+| Vector Store | ChromaDB |
+| Email Integration | Gmail API |
+| Auth | OAuth 2.0 |
+| Language | Python |
 
 ---
 
 ## ⚙️ Installation
 
-Clone the repository:
+**1. Clone the repository:**
 
-- git clone https://github.com/YOUR_USERNAME/Gmail_RAG_app.git
-- cd Gmail_RAG_app
+```bash
+git clone https://github.com/YOUR_USERNAME/Gmail_RAG_app.git
+cd Gmail_RAG_app
+```
 
-Install dependencies:
+**2. Install dependencies:**
 
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
 ## 🔑 Gmail API Setup
 
-1. Go to Google Cloud Console
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a new project
-3. Enable **Gmail API**
-4. Create **OAuth Client ID (Desktop App)**
-5. Download the credentials file
-6. Rename it to:
-
-credentials.json
-
-Place it in the **project root folder**.
+3. Enable the **Gmail API**
+4. Create an **OAuth Client ID** (Desktop App type)
+5. Download the credentials file and rename it to `credentials.json`
+6. Place `credentials.json` in the **project root folder**
 
 ---
 
-## ▶️ Run the Application
+## ▶️ Running the App
 
-Start the Streamlit app:
-
+```bash
 streamlit run app.py
+```
 
 A browser window will open where you can:
 
-- Enter your **OpenAI API key**
-- Authenticate with your **Google account**
-- Start chatting with your Gmail inbox
+1. Enter your **OpenAI API key**
+2. Authenticate with your **Google account**
+3. Start chatting with your Gmail inbox
 
 ---
 
 ## 📁 Project Structure
 
+```
 Gmail_RAG_app/
-│
-├──app.py
-├──requirements.txt
-├──README.md
-└──.gitignore
+├── app.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
 ---
 
 ## 🔒 Security
 
-Sensitive files should not be pushed to GitHub.
+The following files contain sensitive credentials and **must not be committed to GitHub**. Add them to your `.gitignore`:
 
-Add these to `.gitignore`:
-
-- credentials.json
-- token.json
+```
+credentials.json
+token.json
+```
 
 ---
 
 ## 💡 Future Improvements
 
-- AI-generated daily email summaries
-- Automatic action item extraction
-- Email topic clustering
-- Semantic email search filters
-- Slack / Teams integration
+- [ ] AI-generated daily email summaries
+- [ ] Automatic action item extraction
+- [ ] Email topic clustering
+- [ ] Semantic email search filters
+- [ ] Slack / Teams integration
 
 ---
 
-## 📜 Note
+## 📜 Disclaimer
 
-This project is intended for **educational and demonstration purposes**.
+This project is intended for **educational and demonstration purposes only**.
